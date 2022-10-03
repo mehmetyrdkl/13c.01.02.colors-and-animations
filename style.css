@@ -14,7 +14,6 @@
   --color-accent1: #fa2f5b;
   --color-accent2: #2a99c6;
   --color-accent3: #2c3bbe;
-  --color-accent4: #04b989;
 }
 
 /* Fonts */
@@ -61,7 +60,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--color-accent3);
+  color: var(--color-accent1);
 }
 
 a:hover {
@@ -77,7 +76,7 @@ button {
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
-  background-color: var(--color-accent3);
+  background-color: var(--color-accent1);
   color: var(--color-secondary);
 }
 
@@ -279,7 +278,7 @@ footer h3 {
 }
 
 footer a {
-  color: var(--color-secondary);
+  color: var(--color-accent1);
 }
 
 footer section.left {
