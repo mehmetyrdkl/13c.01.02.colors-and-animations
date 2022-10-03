@@ -206,7 +206,7 @@ header button {
   min-height: 150px;
   padding: 1rem;
   margin: 3rem;
-  background-color: #ccc;
+  background-color: var(--color-primary);
   border-radius: 300px;
 }
 .product_graphics object {
