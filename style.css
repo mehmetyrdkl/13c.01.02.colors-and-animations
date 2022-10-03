@@ -91,7 +91,7 @@ input[type="text"] {
   padding: 1rem 1rem;
   font-size: 1rem;
   text-align: left;
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-light);
   border-color: var(--color-accent3);
   color: var(--color-primary);
 }
