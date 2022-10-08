@@ -61,16 +61,34 @@ p {
 a {
   text-decoration: none;
   color: var(--color-accent1);
+  transition: 0.5s ease;
+  position: relative;
+  cursor: pointer;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: var(--color-accent1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* UI Elements */
 button {
-  display: inline-block;
-  height: 3rem;
   padding: 1rem 2rem;
   border: none;
   font-size: 1rem;
@@ -78,10 +96,30 @@ button {
   text-decoration: none;
   background-color: var(--color-accent1);
   color: var(--color-secondary);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+nav button:hover {
+  background-color: var(--color-primary);
+  border: solid 3px var(--color-accent1);
+  color: var(--color-accent1);
 }
 
 .dark_button {
   background-color: var(--color-accent1);
+}
+
+.dark_button:hover {
+  background-color: var(--color-secondary);
+  border: solid 3px var(--color-accent1);
+  color: var(--color-accent1);
+}
+
+#request button:hover {
+  background-color: var(--color-secondary-darker);
+  border: solid 2px var(--color-accent1);
+  color: var(--color-accent1);
 }
 
 input[type="text"] {
@@ -105,9 +143,64 @@ nav {
   background-color: var(--color-primary);
 }
 
+.toggle {
+  width: 4rem;
+  height: 2rem;
+  border-radius: 3rem;
+  background: var(--color-secondary);
+  position: relative;
+  box-shadow: 0 0 0.2rem 0.2rem rgba(24, 24, 24, 0.397) inset;
+  cursor: pointer;
+}
+
+.toggle:after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 2px;
+  width: calc(2rem - 4px);
+  height: calc(2rem - 4px);
+  background: var(--color-accent1);
+  z-index: 10;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 1rem rgba(24, 24, 24, 0.801);
+}
+
+.toggled:after {
+  transform: translateX(2rem);
+  background-color: var(--color-primary);
+}
+
+/* LINKS AND STUFF */
+
+a a:hover {
+  text-decoration: none;
+}
+
 nav a {
   color: var(--color-secondary);
   text-decoration: none;
+  transition: 0.5s ease;
+  position: relative;
+}
+
+nav a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 nav a.logo {
@@ -279,6 +372,27 @@ footer h3 {
 
 footer a {
   color: var(--color-accent1);
+  text-decoration: none;
+  transition: 0.5s ease;
+  position: relative;
+}
+
+footer a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: var(--color-accent1);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+
+footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 footer section.left {
@@ -308,3 +422,14 @@ footer section div {
     line-height: 3.5rem;
   }
 }
+
+/* DARK MODE SETTINGS */
+
+/* TO DO!!!!! */
+
+/* Add a dark mode toggle
+Probabaly in the header
+On click it will change classes for elements - classes with dark colors,
+every color that is already dark will go 1 shade darker,
+paragraph text content that is using the dark blue color will change to the color of the header
+*/
