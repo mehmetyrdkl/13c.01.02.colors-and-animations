@@ -8,6 +8,7 @@
 :root {
   --color-primary: #001d38;
   --color-secondary: #e9ebea;
+  --color-secondary-section: #e9ebea;
   --color-secondary-light: #eff1f0;
   --color-secondary-dark: #ececec;
   --color-secondary-darker: #dfdfdf;
@@ -223,7 +224,7 @@ header {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-section);
 }
 
 header p {
@@ -314,7 +315,7 @@ header button {
   padding: 2rem;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--color-secondary-lighter);
+  background-color: var(--color-secondary-light);
 }
 
 .highlight div {
@@ -425,11 +426,14 @@ footer section div {
 
 /* DARK MODE SETTINGS */
 
-/* TO DO!!!!! */
-
-/* Add a dark mode toggle
-Probabaly in the header
-On click it will change classes for elements - classes with dark colors,
-every color that is already dark will go 1 shade darker,
-paragraph text content that is using the dark blue color will change to the color of the header
-*/
+.dark-mode {
+  --color-primary: #00101f;
+  --color-secondary: #bebebe;
+  --color-secondary-section: #444444;
+  --color-secondary-light: #858585;
+  --color-secondary-dark: #696969;
+  --color-secondary-darker: #4e4e4e;
+  --color-accent1: #af2442;
+  --color-accent2: #2480a5;
+  --color-accent3: #212c8f;
+}

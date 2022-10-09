@@ -11,4 +11,5 @@ const toggle = document.querySelector(".toggle");
 
 toggle.addEventListener("click", function () {
   toggle.classList.toggle("toggled");
+  document.body.classList.toggle("dark-mode");
 });
