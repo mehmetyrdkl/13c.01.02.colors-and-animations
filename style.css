@@ -14,6 +14,7 @@
   --color-secondary-darker: #dfdfdf;
   --color-accent1: #fa2f5b;
   --color-accent2: #2a99c6;
+  --color-accent21: rgb(17, 58, 75);
   --color-accent3: #2c3bbe;
 }
 
@@ -308,6 +309,11 @@ header button {
   height: 100%;
 }
 
+#product h2,
+h3 {
+  color: var(--color-accent2);
+}
+
 /* highlight sections */
 .highlight {
   display: flex;
@@ -432,8 +438,12 @@ footer section div {
   --color-secondary-section: #444444;
   --color-secondary-light: #858585;
   --color-secondary-dark: #696969;
-  --color-secondary-darker: #4e4e4e;
-  --color-accent1: #af2442;
-  --color-accent2: #2480a5;
+  --color-secondary-darker: #444444;
+  --color-accent1: #70172a;
+  --color-accent2: rgb(27, 92, 120);
   --color-accent3: #212c8f;
+}
+
+.dark-mode #request h2 {
+  --color-accent-2: rgb(17, 58, 75);
 }
