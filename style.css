@@ -6,13 +6,13 @@
 }
 
 :root {
-  --color-primary: #001d38;
+  --color-primary: #001427;
   --color-secondary: #e9ebea;
   --color-secondary-section: #e9ebea;
   --color-secondary-light: #eff1f0;
   --color-secondary-dark: #ececec;
   --color-secondary-darker: #dfdfdf;
-  --color-accent1: #fa2f5b;
+  --color-accent1: #c02b4b;
   --color-accent2: #2a99c6;
   --color-accent21: rgb(17, 58, 75);
   --color-accent3: #2c3bbe;
@@ -430,20 +430,24 @@ footer section div {
   }
 }
 
+/* animation - fade */
+
+.fade {
+  display: block;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
 /* DARK MODE SETTINGS */
 
 .dark-mode {
-  --color-primary: #00101f;
-  --color-secondary: #bebebe;
-  --color-secondary-section: #444444;
-  --color-secondary-light: #858585;
-  --color-secondary-dark: #696969;
-  --color-secondary-darker: #444444;
-  --color-accent1: #70172a;
-  --color-accent2: rgb(27, 92, 120);
+  --color-primary: #131518;
+  --color-secondary: #c9c9c9;
+  --color-secondary-section: #424242;
+  --color-secondary-light: #646464;
+  --color-secondary-dark: #575757;
+  --color-secondary-darker: #3a3a3a;
+  --color-accent1: #6e0e23;
+  --color-accent2: rgb(9, 37, 49);
   --color-accent3: #212c8f;
-}
-
-.dark-mode #request h2 {
-  --color-accent-2: rgb(17, 58, 75);
 }
